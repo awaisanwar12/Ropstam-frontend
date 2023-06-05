@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+With this application users are able to create, update and delete cars.
+Table of Contents
+Features
+## Table of Contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation and Setup](#installation-and-setup)
+- [API Routes](#api-routes)
 
-## Available Scripts
+- [Frequently Asked Questions](#frequently-asked-questions)
 
-In the project directory, you can run:
+## Features
+Car mangement consists of the following features:
 
-### `npm start`
+Authentication
+- Authentication
+  - It uses JSON Web Token (JWT) for authentication.
+  - Token is generated on user login.
+  - Token is perpetually verified to check the state of the user if logged in or not.
+  - User is assigned normal role on registration.
+  - Admin User is pre-seeded into the application with administrative privileges.
+- Normal Users
+  - Users can register.
+  - Users can log in.
+  - Users can view all cars in the catalogue.
+ 
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Car management system makes use of a host of modern technologies. The core ones are:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: This project makes use of the React JavaScript library to build the interface. React is used for building web pages that are structured as a collection of components. For more information, see [this link](https://reactjs.org/).
+- **ECMAScript 6**: Also known as ES2015, this is a version of JavaScript with next-generation features like arrow functions, generators, enhanced object literals, spread operators, and more. ES2015 is used in many areas of this project. See [this link](https://www.ecma-international.org/ecma-262/6.0/) for details.
+- **Node.js**: Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code on the server-side. See [this link](https://nodejs.org/en/) for details.
+- **Express.js**: Express.js is a web application framework for Node.js. It is designed for building web applications and APIs. See [this link](https://expressjs.com/) for details.
+- **MongoDB**: This application uses MongoDB for database management.
+## Installation and Setup
 
-### `npm test`
+To install this application, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Git clone this repository
+2. CD to the created directory
+3. Run `npm install`
+4. Run `npm start` to start the server
+5. Install MongoDB
+6. Create a MongoDB database
+7. Navigate to the server directory and run migrations
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+run npm start
+# API Routes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Here are the available API routes for this application:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `POST: /api/db/users/signup` API route for users to create accounts and login to the application.
+- `POST: /api/db/users/signin` (username, password) API route that allows users to add new cars.
+- `GET: /api/cars` API route that allows users to get all cars in the library.
+- `PUT: /api/cars:id` API route that allows users to modify a book in the library.
+- `DELETE: /api/cars/delete/:bookId` API route that allows an admin to delete books.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For more details on the available API routes, see [API Routes](#api-routes) section.
+# Frequently Asked Questions
 
-## Learn More
+Here are some frequently asked questions about this application:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Q: How do I add a new car to the catalogue?
+  - A: To add a new car, use the `POST: /api/db/users/signin` API route.
+- Q: How do I modify a car in the catalogue?
+  - A: To modify a car, use the `PUT: /api/cars:id` API route.
+- Q: How do I delete a car from the library?
+  - A: To delete a book, use the `DELETE: /api/cars/delete/:bookId` API route.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[author]: Muhammad Awais Anwar
+ 
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
